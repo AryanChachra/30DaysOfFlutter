@@ -9,6 +9,7 @@ class HomePage extends StatelessWidget {
     final String name="Aryan";
     return Scaffold(
       appBar: AppBar(
+
         title: Text('Flutter App'),
       ),
       body: Center(
