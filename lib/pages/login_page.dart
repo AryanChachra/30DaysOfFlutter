@@ -12,8 +12,8 @@ class _LoginPageState extends State<LoginPage> {
 
   final _formKey = GlobalKey<FormState>();
 
-  moveToHome(BuildContext context) async{
-    if(_formKey.currentState!.validate()) {
+  moveToHome(BuildContext context) async {
+    if (_formKey.currentState!.validate()) {
       setState(() {
         changebutton = true;
       });
@@ -56,8 +56,8 @@ class _LoginPageState extends State<LoginPage> {
                       TextFormField(
                         decoration: InputDecoration(
                             hintText: "Enter Username", labelText: "Username"),
-                        validator: (value){
-                          if(value!.isEmpty){
+                        validator: (value) {
+                          if (value!.isEmpty) {
                             return "Username cannot be Empty";
                           }
                           return null;
@@ -71,11 +71,10 @@ class _LoginPageState extends State<LoginPage> {
                         obscureText: true,
                         decoration: InputDecoration(
                             hintText: "Enter Password", labelText: "Password"),
-                        validator: (value){
-                          if(value!.isEmpty){
+                        validator: (value) {
+                          if (value!.isEmpty) {
                             return "Password cannot be Empty";
-                          }
-                          else if(value!.length<6){
+                          } else if (value!.length < 6) {
                             return "Length of the Password should be atleast 6 characters";
                           }
                           return null;
@@ -84,7 +83,6 @@ class _LoginPageState extends State<LoginPage> {
                       SizedBox(
                         height: 40,
                       ),
-            
                       Material(
                         color: Colors.deepPurple,
                         borderRadius:
@@ -94,7 +92,7 @@ class _LoginPageState extends State<LoginPage> {
                           child: AnimatedContainer(
                             duration: Duration(seconds: 1),
                             height: 50,
-                            width: changebutton?50: 150,
+                            width: changebutton ? 50 : 150,
                             alignment: Alignment.center,
                             child: changebutton
                                 ? Icon(
