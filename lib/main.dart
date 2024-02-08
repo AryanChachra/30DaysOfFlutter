@@ -5,6 +5,7 @@ import 'package:course_30daysofflutter/widgets/themes.dart';
 import 'package:flutter/material.dart';
 
 //In Day 11, learnt about widget Tree, render tree and element tree also learnt about how the positioning works with parent widget and learnt the concept of constraints and context.
+
 void main() {
   runApp(MyApp());
 }
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       themeMode: ThemeMode.light,
-      theme:  MyTheme.lightTheme(context),
+      theme: MyTheme.lightTheme(context),
       darkTheme: MyTheme.darkTheme(context),
       initialRoute: MyRoutes.homeRoute,
       debugShowCheckedModeBanner: false,
