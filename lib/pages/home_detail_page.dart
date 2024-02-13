@@ -14,9 +14,9 @@ class HomeDetailPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
       ),
-      backgroundColor: MyTheme.creamColor,
+      backgroundColor: context.canvasColor,
       bottomNavigationBar: Container(
-        color: Colors.white,
+        color: context.cardColor,
         child: ButtonBar(
           alignment: MainAxisAlignment.spaceBetween,
           buttonPadding: EdgeInsets.zero,
@@ -27,7 +27,7 @@ class HomeDetailPage extends StatelessWidget {
               child: "Add to Cart".text.color(Colors.white).make(),
               style: ButtonStyle(
                   backgroundColor:
-                      MaterialStateProperty.all(MyTheme.darkBluish),
+                      MaterialStateProperty.all(context.theme.highlightColor),
                   shape: MaterialStateProperty.all(StadiumBorder())),
             ).wh(150, 50)
           ],
@@ -47,11 +47,11 @@ class HomeDetailPage extends StatelessWidget {
               edge: VxEdge.top,
               arcType: VxArcType.convey,
               child: Container(
-                color: Colors.white,
+                color: context.cardColor,
                 width: context.screenWidth,
                 child: Column(
                   children: [
-                    catalog.name.text.xl4.color(MyTheme.darkBluish).bold.make(),
+                    catalog.name.text.xl4.color(context.theme.hintColor).bold.make(),
                     catalog.desc.text.textStyle(context.captionStyle).xl.make(),
                     10.heightBox,
                     "omnesque vivamus fastidii quam dicat dictas tritani vituperatoribus corrumpit sale est nunc verear erroribus error penatibus nam postulant appareat dapibus suavitate dissentiunt eius melius fusce ea omittantur libero etiam putent dolor suspendisse ac convallis mi vix solum fuisset legimus porta omittam primis appareat tibique platea maximus singulis vivamus volutpat definitionesz"
