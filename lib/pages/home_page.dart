@@ -1,4 +1,6 @@
+import 'package:course_30daysofflutter/utils/routes.dart';
 import 'package:course_30daysofflutter/widgets/themes.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'dart:convert';
@@ -38,6 +40,12 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: MyTheme.creamColor,
+        floatingActionButton: FloatingActionButton(onPressed: (){
+          Navigator.pushNamed(context, MyRoutes.cartRoute);
+        },
+          backgroundColor: MyTheme.darkBluish,
+        child: Icon(CupertinoIcons.cart, color: Colors.white,),
+        ),
         body: SafeArea(
           child: Container(
             padding: Vx.m32,
